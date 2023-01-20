@@ -55,7 +55,6 @@ class App extends Component {
     return (
       <>
         <Phonebook onSubmit={this.onSubmit}></Phonebook>
-
         <PhonebookList
           contacts={visibleContacts}
           value={this.state.filter}
