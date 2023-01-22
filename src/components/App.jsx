@@ -15,11 +15,10 @@ class App extends Component {
   };
 
   componentDidMount() {
-    JSON.parse(localStorage.getItem('contacts'))
-      ? this.setState({
-          contacts: JSON.parse(localStorage.getItem('contacts')),
-        })
-      : this.setState({ contacts: this.state.contacts });
+    JSON.parse(localStorage.getItem('contacts')) &&
+      this.setState({
+        contacts: JSON.parse(localStorage.getItem('contacts')),
+      });
   }
 
   componentDidUpdate() {
